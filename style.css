@@ -48,7 +48,9 @@ body {
     color: #ddd;
   }
 
+  /* Dark mode gomb igazítása */
   #darkModeToggle {
+    margin-left: 20px; /* Hozd beljebb a gombot */
     padding: 8px 12px;
     background-color: #ddd;
     border: none;
@@ -79,9 +81,11 @@ body {
   
   .project-card {
     background: #eaeaea;
-    padding: 20px;
+    padding: 2px ;      /* Csökkentett padding */
+    padding-left: 40px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;     /* Kisebb margó */
+    border: 3px solid #a8a8a8;  /* Vékonyabb keret */
   }
   
   footer {
@@ -111,6 +115,7 @@ body {
   
   body.dark-mode .project-card {
     background: #2a2a2a;
+    border: 1px solid #444;
   }
 
   body.dark-mode #darkModeToggle {
@@ -361,6 +366,57 @@ body.dark-mode #contact a {
 
 body.dark-mode #contact a:hover {
     color: #66ccff;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+body.dark-mode .contact-button {
+    background-color: #005fa3;
+    color: #fff;
+}
+
+body.dark-mode .contact-button:hover {
+    background-color: #0077cc;
+}
+
+.nav-link-back {
+    margin-right: 20px;
+    padding: 8px 12px;
+    background: none;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.nav-link-back:hover {
+    border-color: #0077cc;
+    background-color: #e0e0e0;
+}
+
+body.dark-mode .nav-link-back {
+    color: #ddd;
+}
+
+body.dark-mode .nav-link-back:hover {
+    border-color: #66ccff;
+    background-color: #444;
 }
 
 

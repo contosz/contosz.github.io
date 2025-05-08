@@ -4,6 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfólióm</title>
+        <!-- Helyezd ezt a <head> rész elejére, a style.css előtt! -->
+        <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+        document.documentElement.classList.add('dark-mode');
+        }
+        </script>
+
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script> 
       </head>
@@ -44,14 +51,14 @@
       
     <section id="projects">
       <h2>Projektek</h2>
-      <div class="project-card">
-        <h3>Komplex Érettségi Munka</h3>
-        <p>Weboldalról Irányítható okos ház.</p>
-      </div>
-      <div class="project-card">
-        <h3>Saját Portfólió</h3>
-        <p>Ez a jelenlegi oldal is egy projekt, JS funkciókkal és saját dizájnnal.</p>
-      </div>
+      <a href="index2.html" class="project-card" style="display:block; text-decoration:none; color:inherit;">
+        <h3>  Komplex Érettségi Munka - Okos Ház</h3>
+
+      </a>
+      <a href="index3.html" class="project-card" style="display:block; text-decoration:none; color:inherit;">
+        <h3>  Saját Portfólió - Azaz ez a weboldal</h3>
+        
+      </a>
     </section>
 
     <section id="contact">
@@ -63,24 +70,9 @@
 
     <section id="contact">
         <h2>Kapcsolat</h2>
-        <p>Ha bárminemű kérdésed van, vedd fel velem a kapcsolatot az alábbi űrlapon keresztül!</p>
-      
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Név:</label>
-            <input type="text" id="name" name="name" placeholder="Írd be a neved" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Írd be az e-mail címed" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Üzenet:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Írd ide az üzeneted" required></textarea>
-          </div>
-          <button type="submit">Küldés</button>
-        </form>
-      </section>
+        <p>Ha bárminemű kérdésed van, kattints az alábbi gombra, hogy kapcsolatba lépj velem!</p>
+        <a href="https://forms.gle/SPYWUPKLQLDeocPq5" target="_blank" class="contact-button">Kapcsolatfelvétel</a>
+    </section>
       
   </main>
 
