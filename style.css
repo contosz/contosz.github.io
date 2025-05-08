@@ -1,0 +1,366 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #f0f0f0;
+  }
+  
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 2px solid transparent;  /* Alapértelmezett, láthatatlan keret */
+    border-radius: 6px;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    border-color: #0077cc;  /* Hover állapotban kék keret */
+    background-color: #e0e0e0;
+  }
+  
+  body.dark-mode .nav-links a {
+    color: #ddd;
+  }
+  
+  body.dark-mode .nav-links a:hover {
+    border-color: #66ccff;
+    background-color: #444;
+  }
+  
+
+  body.dark-mode .nav-links a {
+    color: #ddd;
+  }
+
+  #darkModeToggle {
+    padding: 8px 12px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  
+  section {
+    margin-bottom: 60px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .project-card {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 30px;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 0.95em;
+  }
+  
+  body.dark-mode footer {
+    background: #1e1e1e;
+    color: #aaa;
+  }
+  
+  
+  /* Dark mode */
+  body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background: #1e1e1e;
+  }
+  
+  body.dark-mode .project-card {
+    background: #2a2a2a;
+  }
+
+  body.dark-mode #darkModeToggle {
+    background-color: #333;
+    color: #fff;
+  }
+ 
+  #darkModeToggle:hover {
+    background-color: #ccc;
+  }
+  
+  body.dark-mode #darkModeToggle:hover {
+    background-color: #444;
+  }
+
+  #contact {
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  #contact .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  #contact label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  #contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  #contact input:focus, #contact textarea:focus {
+    border-color: #0077cc;
+    outline: none;
+  }
+  
+  #contact button {
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+  }
+  
+  #contact button:hover {
+    background-color: #005fa3;
+  }
+  
+  body.dark-mode #contact {
+    background-color: #333;
+    color: #ddd;
+  }
+  
+  body.dark-mode #contact input, 
+  body.dark-mode #contact textarea {
+    background-color: #444;
+    border: 2px solid #555;
+    color: #fff;
+  }
+  
+  body.dark-mode #contact button {
+    background-color: #005fa3;
+  }
+  
+  body.dark-mode #contact button:hover {
+    background-color: #0077cc;
+  }
+
+  #gallery {
+    padding: 40px;
+    text-align: center;
+  }
+
+  #contact a{
+    text-decoration: none;
+    color: #121212;
+  }
+  
+  #gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+/* Add these styles at the end of your CSS file */
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+body.dark-mode .bar {
+    background-color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;  /* Add space between links and toggle button */
+}
+
+#darkModeToggle {
+    padding: 8px 12px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 35px;
+    }
+ 
+
+    .hamburger {
+        display: block;
+        z-index: 100;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #f0f0f0;
+        padding: 80px 20px 20px;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.dark-mode .nav-container {
+        background-color: #1e1e1e;
+    }
+
+    .nav-container.active {
+        right: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        margin-right: 0;  /* Remove margin in mobile view */
+    }
+
+    .nav-links a {
+        margin: 0;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Update the contact link styles */
+#contact a {
+    text-decoration: none;
+    color: #121212;
+    transition: color 0.3s;  /* Add smooth transition for color change */
+}
+
+/* Add dark mode style for contact links */
+body.dark-mode #contact a {
+    color: #ffffff;
+}
+
+/* Add hover effects */
+#contact a:hover {
+    color: #0077cc;
+}
+
+body.dark-mode #contact a:hover {
+    color: #66ccff;
+}
+
+
