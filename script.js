@@ -23,10 +23,10 @@ if (hamburgerBtn && navContainer) {
     });
 }
 
-// Dark mode állapot betöltése
 if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-}
+    document.documentElement.classList.add('dark-mode');
+    document.body && document.body.classList.add('dark-mode');
+  }
 
 const toggleButton = document.getElementById('darkModeToggle');
 if (toggleButton) {
